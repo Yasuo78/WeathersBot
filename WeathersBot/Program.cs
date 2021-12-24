@@ -61,7 +61,7 @@ namespace WeatherBot
                 {
                     response = streamReader.ReadToEnd();
                 }
-                Wea therResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+                WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
 
                 nameOfCity = weatherResponse.Name;
                 tempOfCity = weatherResponse.Main.Temp - 273;
